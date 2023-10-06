@@ -1820,7 +1820,7 @@ do
 			-- page button
 			tween:Create(
 				button.Title,
-				TweenInfo.new(0.4),
+				TweenInfo.new(0.25),
 				{TextTransparency = 0}
 			):Play()
 			button.Title.Font = Enum.Font.GothamSemibold
@@ -1828,7 +1828,7 @@ do
 			if button:FindFirstChild("Icon") then
 				tween:Create(
 					button.Icon,
-					TweenInfo.new(0.4),
+					TweenInfo.new(0.25),
 					{ImageTransparency = 0}
 				):Play()
 			end
@@ -1892,14 +1892,14 @@ do
 			button.Title.Font = Enum.Font.Gotham
 			tween:Create(
 				button.Title,
-				TweenInfo.new(0.4),
+				TweenInfo.new(0.3),
 				{TextTransparency = 0.65}
 			):Play()
 			
 			if button:FindFirstChild("Icon") then
 				tween:Create(
 					button.Icon,
-					TweenInfo.new(0.4),
+					TweenInfo.new(0.3),
 					{ImageTransparency = 0.65}
 				):Play()
 			end
