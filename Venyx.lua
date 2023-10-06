@@ -1818,11 +1818,19 @@ do
 		
 		if toggle then
 			-- page button
-			button.Title.TextTransparency = 0
+			tween:Create(
+				button.Title,
+				TweenInfo.new(0.4),
+				{TextTransparency = 0}
+			):Play()
 			button.Title.Font = Enum.Font.GothamSemibold
 			
 			if button:FindFirstChild("Icon") then
-				button.Icon.ImageTransparency = 0
+				tween:Create(
+					button.Icon,
+					TweenInfo.new(0.4),
+					{TextTransparency = 0}
+				):Play()
 			end
 			
 			-- update selected page
@@ -1882,10 +1890,18 @@ do
 		else
 			-- page button
 			button.Title.Font = Enum.Font.Gotham
-			button.Title.TextTransparency = 0.65
+			tween:Create(
+				button.Title,
+				TweenInfo.new(0.4),
+				{TextTransparency = 0.65}
+			):Play()
 			
 			if button:FindFirstChild("Icon") then
-				button.Icon.ImageTransparency = 0.65
+				tween:Create(
+					button.Icon,
+					TweenInfo.new(0.4),
+					{ImageTransparency = 0.65}
+				):Play()
 			end
 			
 			-- sections
