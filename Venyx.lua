@@ -702,10 +702,10 @@ do
 			
 			debounce = true
 			text.TextSize = 0
-			utility:Tween(button.Title, {TextSize = 14}, 0.5)
+			utility:Tween(button.Title, {TextSize = 14}, 0.2)
 			
 			wait(0.2)
-			utility:Tween(button.Title, {TextSize = 12}, 0.5)
+			utility:Tween(button.Title, {TextSize = 12}, 0.2)
 			
 			if callback then
 				callback(function(...)
@@ -714,6 +714,20 @@ do
 			end
 			
 			debounce = false
+		end)
+		button.MouseEnter:Connect(function()
+			tween:Create(
+				button.Title,
+				TweenInfo.new(0.3),
+				{TextTransparency = 0}
+			):Play()
+		end)
+		button.MouseLeave:Connect(function()
+			tween:Create(
+				button.Title,
+				TweenInfo.new(0.3),
+				{TextTransparency = 0.1}
+			):Play()
 		end)
 		
 		return button
