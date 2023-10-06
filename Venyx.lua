@@ -1829,7 +1829,7 @@ do
 				tween:Create(
 					button.Icon,
 					TweenInfo.new(0.4),
-					{TextTransparency = 0}
+					{ImageTransparency = 0}
 				):Play()
 			end
 			
