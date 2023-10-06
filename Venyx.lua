@@ -395,7 +395,7 @@ do
 					BackgroundTransparency = 1,
 					Size = UDim2.new(1, 0, 0, 20),
 					ZIndex = 2,
-					Font = Enum.Font.GothamSemibold,
+					Font = Enum.Font.GothamBold,
 					Text = title,
 					TextColor3 = themes.TextColor,
 					TextSize = 12,
