@@ -395,11 +395,11 @@ do
 					BackgroundTransparency = 1,
 					Size = UDim2.new(1, 0, 0, 20),
 					ZIndex = 2,
-					Font = Enum.Font.GothamBlack,
+					Font = Enum.Font.GothamBold,
 					Text = title,
 					TextColor3 = themes.TextColor,
 					TextSize = 12,
-					TextXAlignment = Enum.TextXAlignment.Left,
+					TextXAlignment = Enum.TextXAlignment.Center,
 					TextTransparency = 1
 				}),
 				utility:Create("UIListLayout", {
