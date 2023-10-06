@@ -1,4 +1,3 @@
--- venyx ui lib reuploaded by me
 -- init
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
@@ -15,7 +14,7 @@ local utility = {}
 -- themes
 local objects = {}
 local themes = {
-	Background = Color3.fromRGB(1, 1, 1), 
+	Background = Color3.fromRGB(14, 14, 14), 
 	Glow = Color3.fromRGB(0, 0, 0), 
 	Accent = Color3.fromRGB(10, 10, 10), 
 	LightContrast = Color3.fromRGB(20, 20, 20), 
@@ -283,7 +282,7 @@ do
 						Position = UDim2.new(0, 12, 0, 19),
 						Size = UDim2.new(1, -46, 0, 16),
 						ZIndex = 5,
-						Font = Enum.Font.GothamBold,
+						Font = Enum.Font.GothamBlack,
 						Text = title,
 						TextColor3 = themes.TextColor,
 						TextSize = 14,
