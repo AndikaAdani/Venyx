@@ -758,7 +758,7 @@ do
 				TextColor3 = themes.TextColor,
 				TextSize = 12,
 				TextTransparency = 0.10000000149012,
-				TextXAlignment = Enum.TextXAlignment.Left
+				TextXAlignment = Enum.TextXAlignment.Center
 			}),
 			utility:Create("ImageLabel", {
 				Name = "Button",
