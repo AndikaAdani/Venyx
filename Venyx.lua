@@ -19,7 +19,7 @@ local themes = {
 	Accent = Color3.fromRGB(5,1,8), 
 	LightContrast = Color3.fromRGB(5,1,8), 
 	DarkContrast = Color3.fromRGB(5,1,8),  
-	TextColor = Color3.fromRGB(255, 255, 255)
+	TextColor = Color3.fromRGB(245, 245, 245)
 }
 
 do
