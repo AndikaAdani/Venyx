@@ -1,3 +1,4 @@
+-- venyx ui lib reuploaded by me
 -- init
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
@@ -14,12 +15,12 @@ local utility = {}
 -- themes
 local objects = {}
 local themes = {
-	Background = Color3.fromRGB(5,1,8), 
+	Background = Color3.fromRGB(20, 20, 20), 
 	Glow = Color3.fromRGB(0, 0, 0), 
-	Accent = Color3.fromRGB(5,1,8), 
-	LightContrast = Color3.fromRGB(5,1,8), 
-	DarkContrast = Color3.fromRGB(5,1,8),  
-	TextColor = Color3.fromRGB(245, 245, 245)
+	Accent = Color3.fromRGB(10, 10, 10), 
+	LightContrast = Color3.fromRGB(20, 20, 20), 
+	DarkContrast = Color3.fromRGB(10, 10, 10),  
+	TextColor = Color3.fromRGB(255, 255, 255)
 }
 
 do
@@ -282,7 +283,7 @@ do
 						Position = UDim2.new(0, 12, 0, 19),
 						Size = UDim2.new(1, -46, 0, 16),
 						ZIndex = 5,
-						Font = Enum.Font.GothamBlack,
+						Font = Enum.Font.GothamBold,
 						Text = title,
 						TextColor3 = themes.TextColor,
 						TextSize = 14,
@@ -395,11 +396,11 @@ do
 					BackgroundTransparency = 1,
 					Size = UDim2.new(1, 0, 0, 20),
 					ZIndex = 2,
-					Font = Enum.Font.GothamBold,
+					Font = Enum.Font.GothamSemibold,
 					Text = title,
 					TextColor3 = themes.TextColor,
 					TextSize = 12,
-					TextXAlignment = Enum.TextXAlignment.Center,
+					TextXAlignment = Enum.TextXAlignment.Left,
 					TextTransparency = 1
 				}),
 				utility:Create("UIListLayout", {
@@ -715,20 +716,6 @@ do
 			
 			debounce = false
 		end)
-		button.MouseEnter:Connect(function()
-			tween:Create(
-				button.Title,
-				TweenInfo.new(0.3),
-				{TextTransparency = 0}
-			):Play()
-		end)
-		button.MouseLeave:Connect(function()
-			tween:Create(
-				button.Title,
-				TweenInfo.new(0.3),
-				{TextTransparency = 0.1}
-			):Play()
-		end)
 		
 		return button
 	end
@@ -758,7 +745,7 @@ do
 				TextColor3 = themes.TextColor,
 				TextSize = 12,
 				TextTransparency = 0.10000000149012,
-				TextXAlignment = Enum.TextXAlignment.Center
+				TextXAlignment = Enum.TextXAlignment.Left
 			}),
 			utility:Create("ImageLabel", {
 				Name = "Button",
@@ -1832,19 +1819,11 @@ do
 		
 		if toggle then
 			-- page button
-			tween:Create(
-				button.Title,
-				TweenInfo.new(0.25),
-				{TextTransparency = 0}
-			):Play()
+			button.Title.TextTransparency = 0
 			button.Title.Font = Enum.Font.GothamSemibold
 			
 			if button:FindFirstChild("Icon") then
-				tween:Create(
-					button.Icon,
-					TweenInfo.new(0.25),
-					{ImageTransparency = 0}
-				):Play()
+				button.Icon.ImageTransparency = 0
 			end
 			
 			-- update selected page
@@ -1904,18 +1883,10 @@ do
 		else
 			-- page button
 			button.Title.Font = Enum.Font.Gotham
-			tween:Create(
-				button.Title,
-				TweenInfo.new(0.3),
-				{TextTransparency = 0.65}
-			):Play()
+			button.Title.TextTransparency = 0.65
 			
 			if button:FindFirstChild("Icon") then
-				tween:Create(
-					button.Icon,
-					TweenInfo.new(0.3),
-					{ImageTransparency = 0.65}
-				):Play()
+				button.Icon.ImageTransparency = 0.65
 			end
 			
 			-- sections
